@@ -3,7 +3,7 @@
     {
       "id": 1,
       "username": "john_doe",
-      "profileImage": "https://i.pravatar.cc/150?img=1",
+      "profileImage":"db/assets/user1.jpg",
       "location": "Chennai, India",
       "caption": "Sunsets and coffee ☕🌅",
       "imageUrl": "https://picsum.photos/600/600?random=1",
