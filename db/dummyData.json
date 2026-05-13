@@ -1,0 +1,70 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "username": "john_doe",
+      "profileImage": "https://i.pravatar.cc/150?img=1",
+      "location": "Chennai, India",
+      "caption": "Sunsets and coffee ☕🌅",
+      "imageUrl": "https://picsum.photos/600/600?random=1",
+      "likes": 1245,
+      "commentsCount": 48,
+      "createdAt": "2026-05-10T18:30:00Z",
+      "hashtags": ["sunset", "coffee", "vibes"],
+      "isLiked": true
+    },
+    {
+      "id": 2,
+      "username": "travelwithana",
+      "profileImage": "https://i.pravatar.cc/150?img=2",
+      "location": "Goa, India",
+      "caption": "Beach days are the best days 🏖️",
+      "imageUrl": "https://picsum.photos/600/600?random=2",
+      "likes": 3421,
+      "commentsCount": 132,
+      "createdAt": "2026-05-11T09:15:00Z",
+      "hashtags": ["travel", "beachlife", "vacation"],
+      "isLiked": false
+    },
+    {
+      "id": 3,
+      "username": "fitness_max",
+      "profileImage": "https://i.pravatar.cc/150?img=3",
+      "location": "Bangalore, India",
+      "caption": "No excuses. Just results 💪",
+      "imageUrl": "https://picsum.photos/600/600?random=3",
+      "likes": 876,
+      "commentsCount": 24,
+      "createdAt": "2026-05-12T06:45:00Z",
+      "hashtags": ["fitness", "gym", "motivation"],
+      "isLiked": true
+    },
+    {
+      "id": 4,
+      "username": "foodie_life",
+      "profileImage": "https://i.pravatar.cc/150?img=4",
+      "location": "Mumbai, India",
+      "caption": "Loaded cheese burger 🍔❤️",
+      "imageUrl": "https://picsum.photos/600/600?random=4",
+      "likes": 2230,
+      "commentsCount": 89,
+      "createdAt": "2026-05-12T13:20:00Z",
+      "hashtags": ["food", "burger", "foodie"],
+      "isLiked": false
+    },
+    {
+      "id": 5,
+      "username": "nature_snap",
+      "profileImage": "https://i.pravatar.cc/150?img=5",
+      "location": "Kerala, India",
+      "caption": "Lost in nature 🌿",
+      "imageUrl": "https://picsum.photos/600/600?random=5",
+      "likes": 1540,
+      "commentsCount": 61,
+      "createdAt": "2026-05-13T07:10:00Z",
+      "hashtags": ["nature", "green", "peace"],
+      "isLiked": true
+    }
+  ]
+}
+
