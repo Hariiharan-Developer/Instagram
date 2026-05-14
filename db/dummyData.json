@@ -65,6 +65,72 @@
       "hashtags": ["nature", "green", "peace"],
       "isLiked": true
     }
+  ] ,
+  "profile":{
+      "id": 1,
+      "username": "john_doe",
+      "profileImage":"/db/assets/user1.jpg"
+  },
+  "suggetion":[
+    {
+      "id": 1,
+      "username": "Ajith",
+      "profileImage":"/db/assets/user1.jpg"
+    },
+    {
+       "id": 2,
+      "username": "travelwithana",
+      "profileImage": "/db/assets/user2.jpg"
+    },
+    {
+      "id": 3,
+      "username": "fitness_max",
+      "profileImage": "/db/assets/user3.jpg"
+    },
+    {
+       "id": 4,
+      "username": "foodie_life",
+      "profileImage": "/db/assets/user4.jpg"
+    },
+    {
+      "id": 5,
+      "username": "nature_snap",
+      "profileImage": "/db/assets/user5.jpg"
+    }
+  ],
+  "stories":[
+     {
+      "id": 1,
+      "username": "Ajith",
+      "profileImage":"/db/assets/user1.jpg",
+      "story":"/db/assets/story1.jpg"
+    } ,
+    {
+       "id": 2,
+      "username": "travelwithana",
+      "profileImage": "/db/assets/user2.jpg",
+      "story":"/db/assets/story2.jpg"
+    },
+    {
+      "id": 3,
+      "username": "fitness_max",
+      "profileImage": "/db/assets/user3.jpg",
+      "story":"/db/assets/story3.jpg"
+    },
+    {
+       "id": 4,
+      "username": "foodie_life",
+      "profileImage": "/db/assets/user4.jpg",
+      "story":"/db/assets/story4.jpg"
+
+    },
+    {
+      "id": 5,
+      "username": "nature_snap",
+      "profileImage": "/db/assets/user5.jpg",
+      "story":"/db/assets/story3.jpg"
+
+    }
   ]
 }
 
