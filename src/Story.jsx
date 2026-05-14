@@ -1,7 +1,7 @@
 
 const Story = () => {
   return (
-     <div className="story bg-info">
+     <div className="story ">
         stories
       </div>
   )
