@@ -17,9 +17,9 @@ const Suggetion = () => {
     .catch(err=>console.log(err))
   },[])
   return (
-    <div className="suggetion w-75" >
-      {profile?(<div className="d-flex mt-4">
-        <img className="dp rounded-circle mx-2" src={profile.profileImage} alt="user" />
+    <div className="suggetion w-75 mt-4" >
+      {profile?(<div className="d-flex ">
+        <img className="dp rounded-circle" src={profile.profileImage} alt="user" />
         <h5>{profile.username}</h5>
         <small className="ms-auto text-primary">switch</small>
         </div>)
@@ -27,14 +27,14 @@ const Suggetion = () => {
       }
 
       <div className="d-flex mt-3">
-        <p>Suggested for you</p>
+        <p className="text-muted">Suggested for you</p>
         <b className=" ms-auto">See All</b>
         </div>
         {suggestion.length >0 ? (
       <div className="mt-2">
           {suggestion.map((res,key)=>(
-            <div className="d-flex my-4" key={key}>
-              <img className="dp rounded-circle mx-3" src={res.profileImage} alt="" />
+            <div className="d-flex mt-2 " key={key}>
+              <img className="dp rounded-circle" src={res.profileImage} alt="" />
               <h5>{res.username}</h5>
               <b className="ms-auto text-primary">follow</b>
             </div>

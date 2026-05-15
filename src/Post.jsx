@@ -11,7 +11,7 @@ useEffect(()=>{
 },[])
 
   return (
-    <div className="d-flex justify-content-center">
+    <div className="d-flex justify-content-center mt-5">
      
       {post.length >0 ?(
         <div>{post.map((res,key)=>(
