@@ -1,53 +1,98 @@
-import { useEffect, useState } from "react"
+import { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 const Suggetion = () => {
-  const [profile,setProfile] = useState(null)
-  const [suggestion,setSuggetion]= useState([])
+  const [profile, setProfile] = useState(null);
+  const [suggestion, setSuggetion] = useState([]);
 
-  useEffect(()=>{
-    fetch('http://localhost:3000/profile')
-      .then(res=>res.json())
-      .then(res=>setProfile(res))
-      .catch(err=>console.log(err))
-    
+  const navigate = useNavigate();
 
-    fetch('http://localhost:3000/suggetion')
-    .then(res=>res.json())
-    .then(res=>setSuggetion(res))
-    .catch(err=>console.log(err))
-  },[])
+  useEffect(() => {
+    fetch("http://localhost:3000/profile")
+      .then((res) => res.json())
+      .then((res) => setProfile(res))
+      .catch((err) => console.log(err));
+
+    fetch("http://localhost:3000/suggetion")
+      .then((res) => res.json())
+      .then((res) => setSuggetion(res))
+      .catch((err) => console.log(err));
+  }, []);
+
   return (
-    <div className="suggetion w-75 mt-4" >
-      {profile?(<div className="d-flex ">
-        <img className="dp rounded-circle" src={profile.profileImage} alt="user" />
-        <h5>{profile.username}</h5>
-        <small className="ms-auto text-primary">switch</small>
-        </div>)
-        :(<p>Loading...</p>)
-      }
+    <div className="d-none d-lg-block mt-4">
 
-      <div className="d-flex mt-3">
-        <p className="text-muted">Suggested for you</p>
-        <b className=" ms-auto">See All</b>
+      {/* PROFILE SECTION */}
+      {profile ? (
+        <div className="d-flex align-items-center mb-3">
+
+          <img
+            className="dp rounded-circle"
+            src={profile.profileImage}
+            alt="user"
+            style={{ width: "45px", height: "45px", objectFit: "cover" }}
+          />
+
+          <div className="ms-2">
+            <h6 className="mb-0">{profile.username}</h6>
+            <small className="text-muted">My account</small>
+          </div>
+
+          <small
+            onClick={() => navigate("/profile")}
+            className="ms-auto text-primary"
+            style={{ cursor: "pointer" }}
+          >
+            Switch
+          </small>
         </div>
-        {suggestion.length >0 ? (
-      <div className="mt-2">
-          {suggestion.map((res,key)=>(
-            <div className="d-flex mt-2 " key={key}>
-              <img className="dp rounded-circle" src={res.profileImage} alt="" />
-              <h5>{res.username}</h5>
-              <b className="ms-auto text-primary">follow</b>
-            </div>
-          ))}</div>
-        ) :(<p>Loading...</p>)}
-      
+      ) : (
+        <p>Loading...</p>
+      )}
 
-
-      
-      
-     
+      {/* HEADER */}
+      <div className="d-flex mb-2">
+        <small className="text-muted">Suggested for you</small>
+        <small className="ms-auto fw-bold">See All</small>
       </div>
-  )
-}
 
-export default Suggetion
+      {/* SUGGESTIONS */}
+      {suggestion.length > 0 ? (
+        suggestion.map((res, key) => (
+          <div
+            className="d-flex align-items-center mb-2"
+            key={key}
+          >
+            <img
+              className="rounded-circle"
+              src={res.profileImage}
+              alt=""
+              style={{
+                width: "40px",
+                height: "40px",
+                objectFit: "cover",
+              }}
+            />
+
+            <div className="ms-2">
+              <h6 className="mb-0 small">{res.username}</h6>
+              <small className="text-muted">Suggested for you</small>
+            </div>
+
+            <b
+              className="ms-auto text-primary small"
+              style={{ cursor: "pointer" }}
+            >
+              Follow
+            </b>
+          </div>
+        ))
+      ) : (
+        <p className="text-muted">Loading...</p>
+      )}
+
+    </div>
+  );
+};
+
+export default Suggetion;
