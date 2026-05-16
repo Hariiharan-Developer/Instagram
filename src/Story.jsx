@@ -6,9 +6,9 @@ const Story = () => {
   const navigate = useNavigate();
 
   useEffect(() => {
-    fetch("http://localhost:3000/stories")
+    fetch("/dummyData.json")
       .then((res) => res.json())
-      .then((res) => setStories(res))
+      .then((res) => setStories(res.stories))
       .catch((err) => console.log(err));
   }, []);
 

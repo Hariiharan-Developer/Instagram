@@ -8,14 +8,14 @@ const Suggetion = () => {
   const navigate = useNavigate();
 
   useEffect(() => {
-    fetch("http://localhost:3000/profile")
+    fetch("/dummyData.json")
       .then((res) => res.json())
-      .then((res) => setProfile(res))
+      .then((res) => setProfile(res.profile))
       .catch((err) => console.log(err));
 
-    fetch("http://localhost:3000/suggetion")
+    fetch("/dummyData.json")
       .then((res) => res.json())
-      .then((res) => setSuggetion(res))
+      .then((res) => setSuggetion(res.suggetion))
       .catch((err) => console.log(err));
   }, []);
 

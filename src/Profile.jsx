@@ -9,8 +9,8 @@ const Profile = () => {
 
   useEffect(() => {
     axios
-      .get("http://localhost:3000/profile")
-      .then((res) => setProfile(res.data))
+      .get("/dummyData.json")
+      .then((res) => setProfile(res.data.profile))
       .catch((err) => console.log(err));
   }, []);
 

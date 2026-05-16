@@ -16,9 +16,12 @@ const ViewStory = () => {
       return;
     }
 
-    fetch(`http://localhost:3000/stories/${storyId}`)
+    fetch(`/dummyData.json`)
       .then((res) => res.json())
-      .then((res) => setStory(res))
+      .then((res)=>{
+        const singleStory = res.stories.find((item)=>item.id ==storyId)
+        setStory(singleStory)
+      })
       .catch((err) => console.log(err));
   }, [id, total, navigate]);
 
