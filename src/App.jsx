@@ -1,4 +1,4 @@
-import Feed from "./feed"
+import Feed from "./Feed"
 import Navbar from "./Navbar"
 import Suggetion from "./Suggetion"
 
